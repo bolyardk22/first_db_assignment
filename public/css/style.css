@@ -1,0 +1,133 @@
+#theNavBar {
+	display: inline;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 70px;
+	width: 100%;
+	background-color: #afe0d6;
+/*	background-color: transparent;*/
+	margin: 0;
+	padding: 0;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	border-bottom: 1px #8e8e8e solid;
+	z-index: 999;
+}
+
+#home li {
+	position: relative;
+	display: inline-block;
+	float: left;
+	height: 70px;
+	line-height: 70px;
+}
+
+#home {
+	font-size: 30px;
+}
+
+a.one:link, a.one:visited, a.one:hover {
+	position: relative;
+	top: -10px;
+	left: -50px;
+	font-weight: normal;
+	font-size: 45px;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	color: #474747;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+#optionsdiv {
+	float: right;
+	position: relative;
+	top: -68px;
+	text-align: center;
+}
+
+#options li {
+	list-style-type: none;
+	display: inline;
+}
+
+#theNavBar li ul {
+  position: absolute;
+  display: none;
+}
+
+#theNavBar li:hover ul {
+  display: block;
+}
+
+#theNavBar li ul li {
+  display: block;
+}
+
+body {
+	background-color: #a3a3a3;
+	position: relative;
+	top: 90px;
+}
+
+a.about:link, a.about:visited, a.contact:link, a.contact:visited, a.facebook:link, a.facebook:visited, a.twitter:link, a.twitter:visited {
+	display: inline-block;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-size: 22px;
+	color: #474747;
+	text-decoration: none;
+	line-height: 70px;
+	height: 70px;
+	width: 220px;
+	z-index: 999;
+}
+
+a.about:hover, a.contact:hover, a.facebook:hover, a.twitter:hover, a.links:hover {
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-size: 22px;
+	color: #474747;
+	text-decoration: none;
+	background: #d1d1d1;
+	z-index: 999;
+}
+
+a.links{
+	display: inline-block;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-size: 22px;
+	color: #474747;
+	list-style-type: none;
+	text-decoration: none;
+	line-height: 70px;
+	height: 70px;
+	width: 220px;
+	z-index: 999;
+}
+
+a.facebook, a.twitter {
+	position: relative;
+	display: inline-block;
+	background: #afe0d6;
+	left: -41;
+	z-index: 999;
+}
+
+a.facebook:hover, a.twitter:hover {
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+	font-size: 22px;
+	color: #474747;
+	text-decoration: none;
+	background: #d1d1d1;
+	z-index: 999;
+}
+
+h1 {
+	position: relative;
+	font-size: 24px;
+	font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+}
+
+p {
+	position: relative;
+	font-size: 18px;
+	font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+}
