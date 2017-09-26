@@ -34,6 +34,7 @@
 	<form method="post" action="/edited">
 		<h1>Please edit your personal details.</h1>
 		<% user_row.each do |value| %>
+			<input type = "hidden" value = "<%=value['phone_number'] %>" name = "edit_num">
 			<input type = "text" name = "newfirst_name" value = "<%=value['first_name'] %>">
 			<input type = "text" name = "newlast_name" value = "<%=value['last_name'] %>">
 			<input type = "text" name = "newstreet_address" value = "<%=value['street_address'] %>">
@@ -47,7 +48,10 @@
 	</form>
 
 	<form action = '/deleted' method = 'post'> Delete your row of information:
-        <input type = "submit" value = "Delete Entry">
+		<% user_row.each do |value| %>
+			<input type = "hidden" value = "<%=value['phone_number'] %>" name = "edit_num">
+       		<input type = "submit" value = "Delete Entry">
+        <% end %>
     </form>
 
 </body>

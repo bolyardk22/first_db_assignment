@@ -51,13 +51,20 @@ end
 get '/edit_info' do
 	phonebook = db.exec("Select * From phonebook")
 	edit_num = params[:edit_num]
+	newfirst_name = params[:newfirst_name]
+	newlast_name = params[:newlast_name]
+	newstreet_address = params[:newstreet_address]
+	newcity = params[:newcity]
+	newstate = params[:newstate]
+	newzip = params[:newzip]
+	newphone_number = params[:newphone_number]
+	newemail_address = params[:newemail_address]
 	user_row = db.exec("SELECT * FROM phonebook WHERE phone_number = '#{edit_num}'")
 	erb :edit_page, locals: {edit_num: edit_num, user_row: user_row, phonebook: phonebook}
 end
 
 post '/edited' do
 	edit_num = params[:edit_num]
-	phonebook = db.exec("Select * From phonebook")
 	newfirst_name = params[:newfirst_name]
 	newlast_name = params[:newlast_name]
 	newstreet_address = params[:newstreet_address]
@@ -72,7 +79,8 @@ end
 
 post '/deleted' do
 	phonebook = db.exec("Select * From phonebook")
-    edit_num = params[:edit_num]  
+    edit_num = params[:edit_num]
+    p "#{edit_num}!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     db.exec("DELETE FROM phonebook WHERE phone_number = '#{edit_num}'");
     redirect '/phone_book'
 end
