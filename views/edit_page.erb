@@ -31,6 +31,23 @@
 </div>
 
 <body>
+	<form method="post" action="/edited">
+		<h1>Please edit your personal details.</h1>
+		<% user_row.each do |value| %>
+			<input type = "text" name = "newfirst_name" value = "<%=value['first_name'] %>">
+			<input type = "text" name = "newlast_name" value = "<%=value['last_name'] %>">
+			<input type = "text" name = "newstreet_address" value = "<%=value['street_address'] %>">
+			<input type = "text" name = "newcity" value = "<%=value['city'] %>">
+			<input type = "text" name = "newstate" value = "<%=value['state'] %>">
+			<input type = "text" name = "newzip" value = "<%=value['zip'] %>">
+			<input type = "text" name = "newphone_number" value = "<%=value['phone_number'] %>">
+			<input type = "text" name = "newemail_address" value = "<%=value['email_address'] %>">
+		<% end %>
+		<input type = "submit">
+	</form>
 
+	<form action = '/deleted' method = 'post'> Delete your row of information:
+        <input type = "submit" value = "Delete Entry">
+    </form>
 
 </body>

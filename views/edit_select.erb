@@ -35,6 +35,7 @@
 		<h3>Select the line you wish to edit.</h3>
 		<table id = "edit_select_table">
      	   <tr class = "header">
+     			<th style = "width: 5%;"></th>
                 <th style = "width: 10%;"> First Name </th>
                 <th style = "width: 10%;"> Last Name </th>
                 <th style = "width: 10%;"> City </th>
@@ -47,11 +48,11 @@
 			<div id="search_bar">
 				<input type = "text" id = "search_bar_input" onkeyup = "search_function()" placeholder = "Search by first name">
             		<% phonebook.each do |value| %>
-            			<td> <input type="radio" name="edit_select_table_radio" value="<%= phone_number %>">
+            			<td> <input type="radio" name="edit_select_table_radio" value="<%=value['phone_number'] %>">
             			<td> <%= value['first_name'] %> </td>
             			<td> <%= value['last_name'] %> </td>
-            			<td> <%= value['city'] %> </td>
             			<td> <%= value['street_address'] %> </td>
+            			<td> <%= value['city'] %> </td>
             			<td> <%= value['zip'] %> </td>
             			<td> <%= value['phone_number'] %> </td>
             			<td> <%= value['email_address'] %> </td>

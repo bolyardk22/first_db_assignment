@@ -47,8 +47,8 @@
             		<% phonebook.each do |value| %>
             			<td> <%= value['first_name'] %> </td>
             			<td> <%= value['last_name'] %> </td>
-            			<td> <%= value['city'] %> </td>
             			<td> <%= value['street_address'] %> </td>
+            			<td> <%= value['city'] %> </td>
             			<td> <%= value['zip'] %> </td>
             			<td> <%= value['phone_number'] %> </td>
             			<td> <%= value['email_address'] %> </td>
@@ -57,11 +57,6 @@
 	</table>
 
 	<a href = '/'>Enter another</a><br><a href = '/edit_select'>Edit information</a>
-
-	<form action = '/delete' method = 'post'> Delete your row of information:
-        <input type = "text" name = "user_delete" placeholder = "Type a phone number to delete">
-        <input type = "submit" value = "Delete Entry">
-    </form>
 
 </body>
 
